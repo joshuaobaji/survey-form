@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="technical.css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>technical documentation page></title>
+    </head>
+    <body>
+        <header>
+        <nav id="navbar">
+            <header class="header1">CSS documentation</header>
+            <ul>
+                 <li><a class="nav-link" href="#CSS_basics" rel="internal" >CSS basics</a></li>
+                 <li><a class="nav-link" href="#What_is_CSS" rel="internal" >What is css</a></li>
+                 <li><a class="nav-link" href="#Anatomy_of_a_css_ruleset" rel="internal" >Anatomy of a css ruleset</a></li>
+                 <li><a class="nav-link" href="#Selecting_multiple_elements" rel="internal" >Selecting multiple elements </a></li>
+                 <li><a class="nav-link" href="#Fonts_and_texts" rel="internal" >Fonts and texts</a></li>
+                 <li><a class="nav-link" href="#Reference" rel="internal" >Reference</a></li>
+                  
+               </ul>
+            </nav>
+            </header>
+            <main id="main-doc">
+                <section class="main-section" id="CSS_basics">
+     <header>CSS basics</header>
+      <article>
+          <p>
+CSS (Cascading Style Sheets) is the code that styles web content. CSS basics walks through what you need to get started. We'll answer questions like: How do I make text red? How do I make content display at a certain location in the (webpage) layout? How do I decorate my webpage with background images and colors?</p>
+</article>
+</section>
+<section class="main-section" id="What_is_CSS" />
+<header>What is CSS</header>
+<article>
+    <p>Like HTML, CSS is not a programming language. It's not a markup language either. CSS is a style sheet language. CSS is what you use to selectively style HTML elements. For example, this CSS selects paragraph text, setting the color to red:<br>
+        <code>p {
+      color: red;
+            }
+            </code>
+    </p>
+    <p>To make the code work, we still need to apply this CSS (above) to your HTML document. Otherwise, the styling won't change the appearance of the HTML.</p>
+   
+    </article>
+    </section>
+<section class="main-section" id="Anatomy_of_a_css_ruleset">
+    <header>Anatomy of a css ruleset</header>
+   <article>
+        <p>Let's dissect the CSS code for red paragraph text to understand how it works :</p>
+<p>Selector<br>This is the HTML element name at the start of the ruleset. It defines the element(s) to be styled (in this example, <p> elements). To style a different element, change the selector.</p>
+<p>Declaration<br>This is a single rule like color: red;. It specifies which of the element's properties you want to style.</p>
+<p>Properties<br>These are ways in which you can style an HTML element. (In this example, color is a property of the <p> elements.) In CSS, you choose which properties you want to affect in the rule.</p>
+<p>Property value<br>To the right of the property—after the colon—there is the property value. This chooses one out of many possible appearances for a given property. (For example, there are many color values in addition to red.)</p>
+<p>Note the other important parts of the syntax:</p>
+<li>Apart from the selector, each ruleset must be wrapped in curly braces. ({})</li>
+<li>Within each declaration, you must use a colon (:) to separate the property from its value or values.</li>
+<li>Within each ruleset, you must use a semicolon (;) to separate each declaration from the next one.</li>
+<p>To modify multiple property values in one ruleset, write them separated by semicolons, like this:<br>
+<p><code>
+    p {
+  color: red;
+  width: 500px;
+  border: 1px solid black;
+}
+</code></p>
+</article>
+</section>
+<section class="main-section" id="Selecting_multiple_elements">
+    <header>Selecting multiple elements</header>
+    <article>
+        <p>You can also select multiple elements and apply a single ruleset to all of them. Separate multiple selectors by commas. For example:</p><br>
+        <code>p, li, h1 {
+  color: red;
+}
+</code>
+</article>
+</section>
+<section class="main-section" id="Fonts_and_texts">
+<header>Fonts and texts</header>
+<article>
+<p>Now that we've explored some CSS fundamentals, let's improve the appearance of the example by adding more rules and information to the style.css file.</p><br>
+<li>First, find the output from Google Fonts that you previously saved from What will your website look like?. Add the link element somewhere inside your index.html's head (anywhere between the head and tags). It looks something like this:<br>
+<code> link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"></code>
+</li>
+<li>Next, delete the existing rule you have in your style.css file. It was a good test, but let's not continue with lots of red text.</li>
+<li>Add the following lines (shown below), replacing the font-family assignment with your font-family selection from What will your website look like?. The property font-family refers to the font(s) you want to use for text. This rule defines a global base font and font size for the whole page. Since <html> is the parent element of the whole page, all elements inside it inherit the same font-size and font-family.<br>
+<code>html {
+  font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high  */
+  font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google fonts */
+}
+</code>
+</article>
+</section>
+<section class="main-section" id="Reference">
+    <header>Reference</header>
+    <article>
+        <li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">MDN</li>
+        </article>
+        </section>
+
+        </body>
+
+</html>
