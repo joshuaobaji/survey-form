@@ -14,7 +14,7 @@ html,body{
   height:100%;
   border-right:solid;
   z-index:1;
-  border-color:blue;
+ 
 }
 header{
   color:black;
@@ -79,4 +79,13 @@ section article{
 width: 400px;
 
 }
- 
+ @media only screen and (max-width: 815px) {
+    /* For mobile phones: */
+  #navbar ul{
+  border:1px solid;
+    height:207px;
+  }
+     @media only screen and (max-width: 400px) {
+  #main-doc{
+    margin-left:-10px;
+  }
